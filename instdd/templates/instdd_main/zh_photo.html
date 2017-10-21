@@ -1,0 +1,58 @@
+{% extends "main.html" %}
+
+{% block header %}
+<meta name="keywords" content="Instagram 保存图片 保存视频 Instagram 下载照片 下载视频"/>
+<meta name="description"
+      content="Instagram图片视频在线保存下载 - 简单保存instagram图片视频 - 一键下载 - instdd.com - Instagram photo and video download online"/>
+<meta name="copyright" Content="本页版权归instdd.com所有 All Rights Reserved">
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+{% include "zh_nav.html" %}
+<section>
+    <div id="main-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 show-image">
+                    {% if target_url %}
+
+                    {% if is_img %}
+                    <a href="{{target_url}}" download>
+                        <img class="img-thumbnail img-responsive ins-image" src="{{target_url}}" alt=""
+                             title="点击下载或右键另存进行下载">
+                    </a>
+                    {% else %}
+                    <div class="embed-responsive ins-video">
+                        <iframe class="embed-responsive-item" src="{{target_url}}"></iframe>
+                    </div>
+                    {% endif %}
+
+                    {% else %}
+                    <p>下载失败，可能是您输入地址有误。</p>
+                    {% endif %}
+                    <div class="description" style="padding-top:0;">
+                        <form class="sub_url form-inline" action="/photo" method="post">
+                            <input type="text" class="form-control form-url" name="url"
+                                   placeholder="https://www.instagram.com/p/BRntBqalLsf">
+                            <input type="hidden" name="lang" value="zh">
+                            <div class="btn sub-button">
+                                继续下载
+                            </div>
+                            <div id="wechart" class="btn we-button" data-toggle="popover" data-placement="top">
+                                公众号
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "zh_readme.html" %}
+{% include "footer.html" %}
+{% endblock %}
+{% block script %}
+<script src="static/js/index.js"></script>
+{% endblock %}

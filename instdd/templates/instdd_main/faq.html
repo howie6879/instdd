@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+
+{% block header %}
+<meta name="keywords" content="反馈 - Instagram 保存图片 instagram 下载照片"/>
+<meta name="description"
+      content="Instagram图片在线保存下载 - 简单保存instagram图片 - 一键下载 - instdd.com - Instagram photo download online"/>
+<meta name="copyright" Content="本页版权归instdd.com所有 All Rights Reserved">
+<title>{{ title }}</title>
+<style>
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <br>
+    <br>
+    <pre>
+
+    您好<a href="http://www.instdd.com/" target="_blank">本站</a>免费提供Instagram图片在线保存与下载，公众号：图图推，若您在使用中遇到什么问题或者有什么比较好的建议，请留言哦。
+    </pre>
+    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    <script>
+        var cloudTieConfig = {
+            url: document.location.href,
+            sourceId: "",
+            productKey: "04fa8fb2f36a40988bed95fb17b34d51",
+            target: "cloud-tie-wrapper"
+        };
+    </script>
+    <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+</div>
+{% endblock %}

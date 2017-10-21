@@ -1,0 +1,49 @@
+{% extends "main.html" %}
+
+{% block header %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+<section>
+    <div id="main-page">
+        <div class="container">
+            <br>
+            <br>
+            <img class="center-block img-thumbnail img-responsive ins-image" src="{{img_url}}"
+                 alt="我们不会保存任何图片资源，原资源已经删除，请您重新下载">
+            <!--<div class="bs-callout bs-callout-info" id="callout-type-dl-truncate">-->
+            <!--<h4>资源信息</h4>-->
+            <!--<p></p>-->
+            <!--</div>-->
+            <br>
+            <br>
+            <p>
+                长按就可以下载图片啦^_^笔芯
+            </p>
+            <p>
+                我们提供在线保存Instagram图片服务
+            </p>
+            <p>
+                同时我们承诺不会存储搜索下载的图片
+            </p>
+            <p>
+                资源归原作者所有，使用请与其联系
+            </p>
+            <p>
+                如果您觉得还不错，请记住我们的网站
+            </p>
+            <p>
+                点这里：<a href="http://www.instdd.com" style="color: red">http://www.instdd.com</a>
+            </p>
+            <p>
+                如果您能帮忙分享<strong>图图推</strong>，那就给你我的心❤
+            </p>
+            <p>有意见直接反馈，小糊涂一定改正^……^</p>
+            <br>
+            <img width="300px" height="300px" class="center-block img-thumbnail img-responsive" src="static/images/ttt.png">
+        </div>
+    </div>
+</section>
+{% include "footer.html" %}
+{% endblock %}

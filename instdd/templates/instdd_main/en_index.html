@@ -1,0 +1,72 @@
+{% extends "main.html" %}
+
+{% block header %}
+<meta name="keywords"
+      content="Instagram download, Instagram downloader online, Instagram download photos video, Download Instagram photos video, Download instagram videos, Instgram photo and video download online,Download Instagram Photos, download Instagram pictures "/>
+<meta name="description"
+      content="Instagram photo and video downloader online - Free, and one-click download. Simple way to download Instagram pictures and videos to your PC and Phone"/>
+<meta name="copyright" Content="Copyright © 2017 instdd.com All rights reserved.">
+<meta property="og:url" content="https://www.instdd.com/en"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="{{ title }}"/>
+<meta property="og:description"
+      content="Instagram photo and video downloader online - Free, and one-click download. Simple way to download Instagram pictures and videos to your PC and Phone"/>
+<meta property="og:image" content="https://www.instdd.com/static/images/share.png"/>
+<title>{{ title }}</title>
+<style>
+    @media (max-width: 767px) {
+        #main-page h2.des-p {
+            margin-top: 0 !important;
+        }
+
+        .form-url {
+            margin-top: 10px !important;
+        }
+
+        .description .sub-button {
+            margin-top: 30px !important;
+        }
+    }
+</style>
+{% endblock %}
+{% block content %}
+{% include "en_nav.html" %}
+<section>
+    <div id="main-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="description">
+                        <h1 style="padding-top: 0.2em;">Instagram Photos Download</h1>
+                        <h2 class="des-p" style="font-weight: 300;font-size: 20px;">
+                            We provide a simple way to allow you to save Instagram <strong>photos</strong> and <strong>videos</strong>
+                            online.For example:
+                            Just enter the URL of
+                            the picture and submit it, in which way you can get the pictures you want to be saved. You
+                            don't need to worry that the information of the picture may be leaked, our site promise not
+                            to save your picture.
+                        </h2>
+                        <br>
+                    </div>
+                    <div class="description" style="padding-top:0;">
+                        <form class="sub_url form-inline" action="/photo" method="post">
+                            <input type="text" class="form-control form-url" name="url"
+                                   placeholder="https://www.instagram.com/p/BRntBqalLsf">
+                            <input type="hidden" name="lang" value="en">
+                            <div class="btn sub-button">
+                                Download
+                            </div>
+                            {% include "fb_share.html" %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "en_readme.html" %}
+{% include "footer.html" %}
+{% endblock %}
+{% block script %}
+<script src="static/js/index.js"></script>
+{% endblock %}

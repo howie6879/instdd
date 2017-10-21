@@ -1,0 +1,85 @@
+{% extends "main.html" %}
+
+{% block header %}
+<title>{{ title }}</title>
+<style>
+    .item_img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .item_video {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: 320px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section>
+    <div id="main-page">
+        <div class="container">
+            <br>
+            <br>
+            <p>
+                访问这个页面需要vpn哟
+            </p>
+            <p>
+                长按就可以下载图片啦^_^笔芯
+            </p>
+            <p>
+                小糊涂建议复制这个链接到其他浏览器打开
+            </p>
+            <p>
+                如果有视频，会直接跳出问你是否下载，请放心
+            </p>
+            <p>
+                我们提供在线保存Instagram图片服务
+            </p>
+            <p>
+                同时我们承诺不会存储搜索下载的图片
+            </p>
+            <p>
+                资源归原作者所有，使用请与其联系
+            </p>
+            <p>
+                如果您觉得还不错，请记住我们的网站
+            </p>
+            <p>
+                点这里：<a href="http://www.instdd.com" style="color: red">http://www.instdd.com</a>
+            </p>
+            <br>
+            <div id="show_all_img">
+                <div class="row">
+                    {%for target_url in pic_urls%}
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <img class="img-thumbnail img-responsive item_img" src="{{target_url}}" alt=""
+                             title="{{target_url}}">
+                    </div>
+                    {%endfor%}
+                    {%for target_url in video_urls%}
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="embed-responsive item_video">
+                            <iframe class="embed-responsive-item" src="{{target_url}}"></iframe>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+            <br>
+            <p>
+                如果您能帮忙分享<strong>图图推</strong>，那就给你我的心❤
+            </p>
+            <p><strong>如果您需要下载单用户所有图片视频，请添加小糊涂微信tututui123，免费为您下载</strong></p>
+            <p>有意见直接反馈，小糊涂一定改正^……^</p>
+            <br>
+            <img width="300px" height="300px" class="center-block img-thumbnail img-responsive"
+                 src="static/images/ttt.png">
+        </div>
+    </div>
+</section>
+{% include "footer.html" %}
+{% endblock %}

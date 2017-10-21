@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,  user-scalable=no">
+    <link rel="shortcut icon" href="static/images/favicon.ico"/>
+    <link rel="bookmark" href="static/images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/wechat.css">
+    <meta name="keywords" content="Instagram 保存图片 保存视频 Instagram 下载照片 下载视频"/>
+    <meta name="description"
+          content="Instagram图片视频在线保存下载 - 简单保存instagram图片视频 - 一键下载 - instdd.com - Instagram photo and video download online"/>
+    <meta name="copyright" Content="本页版权归instdd.com所有 All Rights Reserved">
+    <meta name="baidu-site-verification" content="uqNEAzSRfD"/>
+
+    <!-- Bootstrap -->
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {% block header %}{% endblock %}
+</head>
+
+<body>
+{% block content %}{% endblock %}
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="static/js/bootstrap.min.js"></script>
+{% block script %}{% endblock %}
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8bda3d6b78533a104aa554610dcdc42b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>

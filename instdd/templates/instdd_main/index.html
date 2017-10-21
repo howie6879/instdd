@@ -1,0 +1,54 @@
+{% extends "main.html" %}
+
+{% block header %}
+<meta name="keywords" content="Instagram 保存图片 instagram 下载照片 一键保存图片 在线保存照片"/>
+<meta name="description"
+      content="Instagram图片在线保存下载 - 简单保存instagram图片 - 一键下载 - instdd.com - Instagram photo download online"/>
+<meta name="copyright" Content="本页版权归instdd.com所有 All Rights Reserved">
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+{% include "zh_nav.html" %}
+<section>
+    <div id="main-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="description">
+                        <h1 style="padding-top: 1.5em;">Instagram 图片保存</h1>
+                        <h2 class="des-p">
+                            我们提供简单的方式让您可以在线保存Instagram图片，只需输入Instagram图片地址进行提交，您不必担心照片信息泄露，本站承诺不会保存您的图片。</h2>
+                        <br>
+                    </div>
+                    <div class="description" style="padding-top:0;">
+                        <form class="sub_url form-inline" action="/zh_photo" method="post">
+                            <input type="text" class="form-control form-url" name="url"
+                                   placeholder="https://www.instagram.com/p/BRntBqalLsf">
+                            <div class="btn sub-button">
+                                下载
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "zh_readme.html" %}
+{% include "footer.html" %}
+{% block script %}
+<script>
+    $(document).ready(function () {
+        var language = navigator.browserLanguage ? navigator.browserLanguage : navigator.language;
+        if (language.indexOf('en') > -1) {
+            window.location.href = '/en';
+        } else if (language.indexOf('zh') > -1) {
+            window.location.href = '/zh';
+        } else {
+            window.location.href = '/en';
+        }
+    });
+</script>
+{% endblock %}
+{% endblock %}

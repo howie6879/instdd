@@ -1,0 +1,56 @@
+{% extends "main.html" %}
+
+{% block header %}
+<meta name="keywords"
+      content="Instagram download, Instagram downloader online, Instagram download photos video, Download Instagram photos video, Download instagram videos, Instgram photo and video download online,Download Instagram Photos, download Instagram pictures "/>
+<meta name="description"
+      content="Instagram photo and video downloader online - Free, and one-click download. Simple way to download Instagram pictures and videos to your PC and Phone"/>
+<meta name="copyright" Content="Copyright © 2017 instdd.com All rights reserved.">
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+{% include "en_nav.html" %}
+<section>
+    <div id="main-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 show-image">
+                    {% if target_url %}
+                    {% if is_img %}
+                    <a href="{{target_url}}" download>
+                        <img class="img-thumbnail img-responsive ins-image" src="{{target_url}}" alt=""
+                             title="right mouse click than click the save picture as ...">
+                    </a>
+                    {% else %}
+                    <div class="embed-responsive ins-video">
+                        <iframe class="embed-responsive-item" src="{{target_url}}"></iframe>
+                    </div>
+                    {% endif %}
+
+                    {% else %}
+                    <p>Download Failed, please ensure your URl.</p>
+                    {% endif %}
+                    <div class="description" style="padding-top:0;">
+                        <form class="sub_url form-inline" action="/photo" method="post">
+                            <input type="text" class="form-control form-url" name="url"
+                                   placeholder="https://www.instagram.com/p/BRntBqalLsf">
+                            <input type="hidden" name="lang" value="en">
+                            <div class="btn sub-button">
+                                download
+                            </div>
+                            {% include "fb_share.html" %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "en_readme.html" %}
+{% include "footer.html" %}
+{% endblock %}
+{% block script %}
+<script src="static/js/index.js"></script>
+{% endblock %}

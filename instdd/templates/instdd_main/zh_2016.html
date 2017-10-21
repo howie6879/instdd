@@ -1,0 +1,49 @@
+{% extends "main.html" %}
+
+{% block header %}
+<meta name="keywords" content="Instagram 最佳图片 ins年度热门 ins年度最佳 bestnine 保存图片 保存视频 Instagram 下载照片 下载视频"/>
+<meta name="description"
+      content="Instagram图片视频在线保存下载,最佳图片 ins年度热门 ins年度最佳 bestnine,ins一贴多图,简单保存instagram图片视频,一键下载,批量下载,Instagram,ins,存图,保存,下载,原图,图片,照片,相片,Instagram 存图,Instagram 保存,Instagram 下载,Instagram 原图,Instagram 图片,Instagram 照片,Instagram 相片,ins 存图,ins 保存,ins 下载,ins 原图,ins 图片,ins 照片,ins 相片,分享 Instagram 图片,保存 Instagram 图片 视频 头像,下载Instagram 图片, Instagram 图片,instdd.com - Instagram photo and video download online"/>
+<meta name="copyright" Content="本页版权归instdd.com所有 All Rights Reserved">
+<link rel="stylesheet" type="text/css" href="static/css/ins_best.css">
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+{% include "zh_other_nav.html" %}
+<section>
+    <div id="main-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="description">
+                        <h1 style="padding-top: 1.5em;">您的ins年度热门</h1>
+                        <h2 class="des-p">
+                            想知道您过去的一年在ins发表了多少图片么？其中最热门的九张图又是什么呢？输入您的用户名，生成您的年度热门图吧^_^
+                        </h2>
+                        <br>
+                    </div>
+                    <div class="description" style="padding-top:0;">
+                        <form class="sub_url form-inline" action="/ins_best" method="post">
+                            <input type="text" class="form-control form-url" name="username"
+                                   placeholder="输入ins用户名">
+                            <input type="hidden" name="lang" value="zh">
+                            <div class="btn sub-button">
+                                年度热门
+                            </div>
+                            <div id="wechart" class="btn we-button" data-toggle="popover" data-placement="bottom">
+                                公众号
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "zh_readme.html" %}
+{% include "footer.html" %}
+{% endblock %}
+{% block script %}
+<script src="static/js/index.js"></script>
+{% endblock %}

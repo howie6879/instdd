@@ -1,0 +1,69 @@
+{% extends "main.html" %}
+
+{% block header %}
+<meta name="keywords"
+      content="Instagram download, Instagram downloader online, Instagram download photos video, Download Instagram photos video, Download instagram videos, Instgram photo and video download online,Download Instagram Photos, download Instagram pictures "/>
+<meta name="description"
+      content="Instagram photo and video downloader online - Free, and one-click download. Simple way to download Instagram pictures and videos to your PC and Phone"/>
+<meta name="copyright" Content="Copyright © 2017 instdd.com All rights reserved.">
+<title>{{ title }}</title>
+<link rel="stylesheet" type="text/css" href="static/css/photo_group.css">
+{% endblock %}
+
+{% block content %}
+{% include "zh_nav.html" %}
+<section>
+    <div id="main-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 show-image">
+                    <h2 class="des-p">
+                        对于一贴多图，您需要处于<strong>特殊条件下</strong>才可下载，若想下载全部图片视频 关注公众号<strong>图图推</strong>联系后台免费帮您下载
+                    </h2>
+                    <br>
+                    <div class="description" style="padding-top:0;">
+                        <form class="sub_url form-inline" action="/photo" method="post">
+                            <input type="text" class="form-control form-url" name="url"
+                                   placeholder="https://www.instagram.com/p/BRntBqalLsf">
+                            <input type="hidden" name="lang" value="zh">
+                            <div class="btn sub-button">
+                                下载
+                            </div>
+                            <div id="wechart" class="btn we-button" data-toggle="popover" data-placement="bottom">
+                                公众号
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="show_all_img">
+        <div class="container">
+            <div class="row">
+                {%for target_url in pic_urls%}
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <a href="{{target_url}}" download>
+                        <img class="img-thumbnail img-responsive item_img" src="{{target_url}}" alt=""
+                             title="{{target_url}}">
+                    </a>
+                </div>
+                {%endfor%}
+                {%for target_url in video_urls%}
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <div class="embed-responsive item_video">
+                        <iframe class="embed-responsive-item" src="{{target_url}}"></iframe>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "zh_readme.html" %}
+{% include "footer.html" %}
+{% endblock %}
+{% block script %}
+<script src="static/js/index.js"></script>
+{% endblock %}

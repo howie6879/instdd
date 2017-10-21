@@ -1,0 +1,24 @@
+#main-page {
+    width: 100%;
+}
+
+.ins-image {
+    width: 100%;
+    max-width: 640px !important;
+}
+
+#footer {
+    margin-top: 20px;
+}
+
+#footer p, #main-page p {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 12px;
+}
+
+#main-page p {
+    font-size: 15px !important;
+    font-weight: 500;
+}

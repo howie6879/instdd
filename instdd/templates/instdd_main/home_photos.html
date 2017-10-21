@@ -1,0 +1,84 @@
+{% extends "main.html" %}
+
+{% block header %}
+<meta name="keywords" content="Instagram精选图片 保存图片 instagram 下载照片 一键保存图片 在线保存照片"/>
+<meta name="description"
+      content="Instagram精选图片 - Instagram图片在线保存下载 - 简单保存instagram图片 - 一键下载 - instdd.com - Instagram photo download online"/>
+<meta name="copyright" Content="本页版权归instdd.com所有 All Rights Reserved">
+<link rel="stylesheet" type="text/css" href="static/css/home_photos.css">
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-fixed-top navbar-color-on-scroll navbar-info">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false"><span class="sr-only">Toggle navigation</span><span
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="/">Instagram Download
+            </a></div>
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 0px;">
+            <ul class="nav navbar-nav">
+                <li><a class="active" href="/home">Home</a></li>
+                <li><a target="_blank" href="/faq">FAQ</a></li>
+                <li><a target="_blank" href="https://www.instagram.com/howie6879/">Follow Me</a></li>
+            </ul>
+            <a href="/">
+                <div class="btn sub-button pull-right">
+                    下载
+                </div>
+            </a>
+        </div>
+    </div>
+</nav>
+<section>
+    <div id="home-photo-page">
+        <div class="container">
+            <div id="all-img">
+                <div class="item" data-order="31">
+                    <img src="static/ins_photos/2423226917839699968_n.jpg" class="img-responsive" alt="">
+                    <div class="hover-show">
+                        <div class="hover-show-left">
+                            <a href="javascript:;">
+                                <span class="glyphicon glyphicon-heart tag" aria-hidden="true"></span></a>
+                            <span class="tag-num">0</span>
+                        </div>
+                        <div class="hover-show-right">
+                            <a href="static/ins_photos/2423226917839699968_n.jpg" target="_blank">
+                                <span class="glyphicon glyphicon-download-alt tag" aria-hidden="true"></span>
+                            </a>
+                            <span class="tag-num">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "footer.html" %}
+{% endblock %}
+{% block script %}
+<script src="static/js/mp.mansory.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $("#all-img").mpmansory(
+            {
+                childrenClass: 'item', // default is a div
+                columnClasses: 'padding', //add classes to items
+                breakpoints: {
+                    lg: 4,
+                    //md: 4,
+                    sm: 6,
+                    xs: 12
+                },
+                distributeBy: {order: false, height: false, attr: 'data-order', attrOrder: 'asc'}, //default distribute by order, options => order: true/false, height: true/false, attr => 'data-order', attrOrder=> 'asc'/'desc'
+                onload: function (items) {
+                    //make somthing with items
+
+                }
+            }
+        );
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,43 @@
+/*#main-page {*/
+    /*background: #fff !important;*/
+/*}*/
+
+#show_all_img {
+    min-height: 250px;
+    background: rgb(249, 249, 249) !important;
+}
+
+#best_nine{
+    width: 100%;
+}
+
+.ttt-ins {
+    position: absolute;
+    margin-top: -31%;
+    margin-left: 70%;
+}
+
+.sub-button {
+    height: 42px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    vertical-align: middle;
+    background: rgba(230, 118, 118, 0.91);
+    padding: 6px 20px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 5px solid rgba(175, 76, 76, 0.71);
+    border-radius: 1px;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.sub-button:hover {
+    background: rgba(230, 118, 118, 0.82);
+    border-bottom: 5px solid rgba(175, 76, 76, 0.66);
+    color: #ededed;
+}
+
+/*loading*/

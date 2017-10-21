@@ -1,0 +1,118 @@
+#home-photo-page {
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    padding-top: 120px;
+    background-color: #fff;
+}
+
+.navbar.navbar-info {
+    padding-top: 15px !important;
+}
+
+.sub-button {
+    height: 42px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    vertical-align: middle;
+    background: rgba(230, 118, 118, 0.91);
+    padding: 6px 20px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 5px solid rgba(175, 76, 76, 0.71);
+    border-radius: 1px;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.sub-button:hover {
+    background: rgba(230, 118, 118, 0.82);
+    border-bottom: 5px solid rgba(175, 76, 76, 0.66);
+    color: #ededed;
+}
+
+.item {
+    position: relative;
+    border: #c6c6c6 2px solid;
+    width: 100%;
+    background-color: white;
+    min-height: 100px;
+    padding: 5px;
+    margin: 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 2px;
+    border-radius: 4px;,
+
+}
+
+.item .hover-show {
+    position: absolute;
+    background: rgba(219, 218, 218, 0.73);
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    display: none;
+}
+
+.item .hover-show .hover-show-left, .item .hover-show .hover-show-right {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.item .hover-show .hover-show-left .tag, .item .hover-show .hover-show-right .tag {
+    top: 5px;
+    font-size: 23px;
+    color: rgba(119, 119, 119, 0.7);
+    padding-top: 95%;
+}
+
+.item .hover-show .hover-show-left .tag {
+    padding-left: 50%;
+}
+
+.item .hover-show .hover-show-right .tag {
+    padding-left: 25%;
+}
+
+.item .hover-show .hover-show-left .tag-num, .item .hover-show .hover-show-right .tag-num {
+    font-size: 20px;
+    color: rgba(119, 119, 119, 0.7);
+    padding-left: 10px;
+}
+
+.item .hover-show a {
+    text-decoration: none;
+}
+
+.item .hover-show .hover-show-left a > .tag:hover, .item .hover-show .hover-show-right a > .tag:hover {
+    color: rgba(230, 118, 118, 0.91);
+}
+
+.item:hover {
+    opacity: 0.8;
+}
+
+.item .hover-show p {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Lato', sans-serif;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-weight: 400;
+    color: rgba(80, 59, 59, 0.91);
+    font-size: 15px !important;
+    text-shadow: 0 1px 2px rgba(157, 157, 157, 0.49);
+}
+
+.padding {
+    padding: 10px 5px;
+}
+
+@media (max-width: 767px) {
+    .sub-button {
+        display: none;
+    }
+}

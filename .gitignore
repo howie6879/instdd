@@ -1,0 +1,21 @@
+# file
+*.pyc
+*.ini
+*.log
+*.conf
+gunicorn.py
+pro_config.py
+tags
+*.ttf
+.DS_Store
+Caddyfile
+# dir
+__pycache__/
+.vscode/
+build/
+dist/
+*.egg-info/
+ins_photos/
+ins_best/
+app/
+api.txt
