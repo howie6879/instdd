@@ -1,4 +1,4 @@
-## instdd
+## instdd - Instagram **photos** and **videos** online
 
 ![demo](./docs/01.png)
 
@@ -18,7 +18,7 @@ Click here: [https://www.instdd.com/](https://www.instdd.com/)
 
 - save Instagram **photos**  online
 - save Instagram  **videos** online
-- Year's hot
+- year's hot
 
 ### Install
 
