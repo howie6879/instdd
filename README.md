@@ -1,4 +1,4 @@
-## instdd - Instagram **photos** and **videos** online
+## instdd - Save Instagram **photos** and **videos** online
 
 ![demo](./docs/01.png)
 
@@ -47,5 +47,5 @@ python server.py
 
 ### License
 
-License
+instdd is offered under the  GPL License
 
