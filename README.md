@@ -10,7 +10,7 @@ This project provide a simple way to allow you to save Instagram **photos** and 
 
 Just enter the URL of the picture and submit it, in which way you can get the pictures you want to be saved. 
 
-instead build with sanic.
+`instdd` build with sanic.
 
 Click here: [https://www.instdd.com/](https://www.instdd.com/)
 
